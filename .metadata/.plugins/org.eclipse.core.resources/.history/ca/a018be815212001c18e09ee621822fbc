@@ -1,0 +1,23 @@
+/*
+ ============================================================================
+ Name        : Pruebas.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   char cadena[] = ";0Òf·R(4h&~?R€1/";
+   int i;
+
+   for(i = 0; cadena[i]; i++)
+      printf("%c, %d\n", cadena[i], isdigit(cadena[i]));
+
+   return 0;
+}

@@ -1,0 +1,7 @@
+11:53:11 **** Rebuild of configuration Debug for project 3-3Funciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\3-3Funciones.o" "..\\src\\3-3Funciones.c" 
+gcc -o 3-3Funciones.exe "src\\3-3Funciones.o" 
+
+11:53:12 Build Finished. 0 errors, 0 warnings. (took 812ms)
+

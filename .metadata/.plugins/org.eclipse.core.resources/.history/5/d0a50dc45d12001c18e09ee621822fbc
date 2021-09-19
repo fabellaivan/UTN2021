@@ -1,0 +1,138 @@
+/*
+ ============================================================================
+ Name        : 5-2VectoresV1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+/*
+ * Ejercicio 5-2:
+Pedir el ingreso de 10 números enteros entre -1000 y 1000.
+Determinar:
+
+Cantidad de positivos y negativos.
+
+Sumatoria de los pares.
+El mayor de los impares.
+Listado de los números pares.
+Listado de los números de las posiciones impares.
+
+Listado de los números ingresados.
+
+
+Se deberán utilizar funciones y vectores.
+
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+#define T 5
+
+
+void CargarVectoresEnteros(int vector[], int tam);
+int PedirEntero(char mensaje[]);
+int ValidarEntero(float validarNumero);
+
+
+int main(void) {
+	setbuf(stdout, NULL);
+	int listaNumeros[T];
+	CargarVectoresEnteros(listaNumeros,T);
+
+	return EXIT_SUCCESS;
+}
+
+
+void CargarVectoresEnteros(int vector[], int tam)
+{
+	setbuf(stdout, NULL);
+	int valorIngresado;
+	int i ;
+
+		for(i=0;i<tam;i++)
+		{
+			valorIngresado=PedirEntero("Ingrese numero entero entre -1000 y 1000\n");
+			vector[i]=valorIngresado;
+		}
+}
+
+
+int PedirEntero(char mensaje[])
+{
+	setbuf(stdout, NULL);
+	float numeroIngresado;
+	int valido;
+
+	do{
+
+		printf("%s",mensaje);
+		fflush(stdin);
+		scanf("%f",&numeroIngresado);
+
+		valido=ValidarEntero(numeroIngresado);
+
+	}while(valido==0);
+
+	//numeroEntero=atoi(numeroIngresado);
+
+	return numeroIngresado;
+}
+int ValidarEntero(float validarNumero)
+{
+	setbuf(stdout, NULL);
+
+	int aux;
+	aux=validarNumero;
+
+	if( !(isdigit(validarNumero)) )
+	{
+		printf("Por Favor, ingresar numeros solamente\n");
+		return 0;
+	}
+
+	if(validarNumero<-1000 || validarNumero>1000)
+	{
+		printf("El numero ingresado no esta entre los valores correspondientes, intente nuevamente\n");
+		return 0;
+	}
+
+	if(validarNumero>aux)
+	{
+		printf("Debe ingresar numeros enteros, no decimales\n");
+		return 0;
+	}
+
+	return 1 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

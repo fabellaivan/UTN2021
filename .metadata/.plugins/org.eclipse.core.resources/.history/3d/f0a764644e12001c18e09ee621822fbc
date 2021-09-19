@@ -1,0 +1,113 @@
+/*
+ ============================================================================
+ Name        : 5-2VectoresV1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include<conio.h>
+#include<string.h>
+#define T 5
+
+
+void CargarVectoresEnteros(int vector[], int tam);
+int PedirEntero(char mensaje[]);
+int ValidarEntero(char numero[]);
+
+
+int main(void) {
+	setbuf(stdin, NULL);
+	int listaNumeros[T];
+	CargarVectoresEnteros(listaNumeros,T);
+
+	return EXIT_SUCCESS;
+}
+
+
+void CargarVectoresEnteros(int vector[], int tam)
+{
+	int valorIngresado;
+	int i ;
+
+
+		for(i=0;i<tam;i++)
+		{
+			valorIngresado=PedirEntero("Ingrese numero entero entre -1000 y 1000\n");
+			vector[i]=valorIngresado;
+		}
+}
+
+
+int PedirEntero(char mensaje[])
+{
+	char numeroIngresado[5];
+	int paso;
+	int numeroEntero;
+	do{
+		printf("%s",mensaje);
+		scanf("%s",numeroIngresado);
+		paso=ValidarEntero(numeroIngresado);
+
+
+	}while(paso==0);
+	numeroEntero=atoi(numeroIngresado);
+
+	return numeroEntero;
+}
+
+
+int ValidarEntero(char numero[])
+{
+    int i;
+    int numDigito;
+    for(i=0; i<strlen(numero); i++)
+    {
+        if(!(isdigit(numero[i])))
+        {
+            printf("\nINGRESA SOLO NUMEROS\n");
+            getch();
+            return 0;
+        }
+    }
+
+    numDigito=atoi(numero);
+
+	if(numDigito<-1000 || numDigito>1000)
+		{
+			printf("El numero ingresado no esta entre los valores correspondientes, intente nuevamente\n");
+			return 0;
+		}
+
+	return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

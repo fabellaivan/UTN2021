@@ -1,0 +1,110 @@
+/*
+ ============================================================================
+ Name        : Anexo5-1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+/*
+ * Crear un Array de 5 elementos de tipo numérico donde se cargarán edades.
+Agregar la funcionalidad para la opción 1 del Menú del ejercicio anterior utilizando funciones,
+ es decir una función que inicialice el Array.
+Agregar la funcionalidad para la opción 2 del Menú utilizando funciones,
+ es decir una función que le pida los números o edades al usuario para cargar
+  el Array de forma secuencial.
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#define T 5
+void MostrarMenu(void);
+void PedirNumero(char mensaje[],int vector[], int tam);
+int InicializarArray();
+int main(void) {
+
+	MostrarMenu();
+
+
+
+	return EXIT_SUCCESS;
+}
+void MostrarMenu(void){
+
+	setbuf(stdout, NULL);
+	int opcion;
+	int array[];
+	char salir;
+	salir='n';
+	do{
+
+			printf("1-Inicializar\n");
+			printf("2-Cargar\n");
+			printf("3-Mostrar");
+			printf("4-Calcular Promedio\n");
+			printf("5-Ordenar\n");
+			printf("6-salir");
+			scanf("%d",&opcion);
+
+			switch(opcion)
+			{
+			case 1:
+				printf("\nUd ha seleccionado la opcion 1 Inicializar\n");
+				array=InicializarArray();
+				break;
+			case 2:
+				printf("\nUd ha seleccionado Cargar\n");
+				PedirEdad("Por favor ingrese  ",array,T);
+				break;
+			case 3:
+				printf("\nUd ha seleccionado Mostrar\n");
+				break;
+			case 4:
+				printf("\nUd ha seleciconado Calcular Promedio\n");
+				break;
+			case 5:
+				printf("\nUd ha seleccioado Ordenar\n");
+				break;
+			case 6:
+				printf("\ndesea salir\n ? ");
+				fflush(stdin);
+				scanf("%c",&salir);
+				salir=tolower(salir);
+				break;
+			}
+
+		}while(salir!='s');
+
+}
+
+int InicializarArray()
+{
+	int listaNumeros[T];
+
+	return listaNumeros[T];
+}
+
+void PedirNumero(char mensaje[],int vector[], int tam)
+{
+	int i;
+	int numero;
+	int indicador;
+	for(i=0;i<tam;i++)
+	{
+		indicador=i+1;
+		printf("%d numero",indicador);
+		scanf("%d",&numero);
+		vector[i]=numero;
+	}
+
+		return
+}
+
+
+
+
+
+
+

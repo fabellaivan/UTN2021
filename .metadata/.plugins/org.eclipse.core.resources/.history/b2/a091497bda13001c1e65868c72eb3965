@@ -1,0 +1,64 @@
+/*
+ ============================================================================
+ Name        : Anexo5-1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+void MostrarMenu(void);
+int main(void) {
+
+	MostrarMenu();
+
+
+
+	return EXIT_SUCCESS;
+}
+void MostrarMenu(void){
+
+	do{
+			int opcion;
+			char salir;
+			printf("1-Inicializar\n");
+			printf("2-Cargar\n");
+			printf("3-Mostrar");
+			printf("4-Calcular Promedio\n");
+			printf("5-Ordenar\n");
+			printf("6-salir");
+			scanf("%d",&opcion);
+
+			switch(opcion)
+			{
+			case 1:
+				printf("Ud ha seleccionado la opcion 1 Inicializar");
+				break;
+			case 2:
+				printf("Ud ha seleccionado Cargar");
+				break;
+			case 3:
+				printf("Ud ha seleccionado Mostrar");
+				break;
+			case 4:
+				printf("Ud ha seleciconado Calcular Promedio");
+				break;
+			case 5:
+				printf("Ud ha seleccioado Ordenar");
+				break;
+			case 6:
+				printf("desea salir ? ");
+				fflush(stdin);
+				scanf("%c",&salir);
+				salir=tolower(salir);
+				break;
+			}
+
+		}while(salir =='s');
+
+
+}

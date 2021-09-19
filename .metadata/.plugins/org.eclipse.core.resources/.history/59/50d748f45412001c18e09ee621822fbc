@@ -1,0 +1,101 @@
+/*
+ ============================================================================
+ Name        : 5-2VectoresV1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <string.h>
+#define T 5
+
+
+void CargarVectoresEnteros(int vector[], int tam);
+int PedirEntero(char mensaje[]);
+int ValidarEntero(int validarNumero);
+
+
+int main(void) {
+	setbuf(stdin, NULL);
+	int listaNumeros[T];
+	CargarVectoresEnteros(listaNumeros,T);
+
+	return EXIT_SUCCESS;
+}
+
+
+void CargarVectoresEnteros(int vector[], int tam)
+{
+	int valorIngresado;
+	int i ;
+
+
+		for(i=0;i<tam;i++)
+		{
+			valorIngresado=PedirEntero("Ingrese numero entero entre -1000 y 1000\n");
+			vector[i]=valorIngresado;
+		}
+}
+
+
+int PedirEntero(char mensaje[])
+{
+	int numeroIngresado;
+	int paso;
+	int numeroEntero;
+
+	do{
+
+		printf("%s",mensaje);
+		scanf("%d",numeroIngresado);
+		fflush(stdin);
+		paso=ValidarEntero(numeroIngresado);
+
+
+	}while(paso==0);
+
+	//numeroEntero=atoi(numeroIngresado);
+
+	return numeroEntero;
+}
+int ValidarEntero(int validarNumero)
+{
+	int i;
+	for(i=0;i)
+
+
+
+	return 1 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

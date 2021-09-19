@@ -1,0 +1,13 @@
+13:19:50 **** Incremental Build of configuration Debug for project Anexo5-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Anexo5-1.o" "..\\src\\Anexo5-1.c" 
+..\src\Anexo5-1.c: In function 'MostrarMenu':
+..\src\Anexo5-1.c:41:6: error: array size missing in 'listaEdades'
+   41 |  int listaEdades[];
+      |      ^~~~~~~~~~~
+..\src\Anexo5-1.c:59:16: error: assignment to expression with array type
+   59 |     listaEdades=InicializarArray();
+      |                ^
+
+13:19:50 Build Failed. 2 errors, 0 warnings. (took 140ms)
+

@@ -1,0 +1,7 @@
+20:14:26 **** Incremental Build of configuration Debug for project 5-2Vectores ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\5-2Vectores.o" "..\\src\\5-2Vectores.c" 
+gcc -o 5-2Vectores.exe "src\\5-2Vectores.o" 
+
+20:14:27 Build Finished. 0 errors, 0 warnings. (took 462ms)
+

@@ -1,0 +1,16 @@
+21:38:13 **** Incremental Build of configuration Debug for project CadenaDeCaracteres ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CadenaDeCaracteres.o" "..\\src\\CadenaDeCaracteres.c" 
+..\src\CadenaDeCaracteres.c: In function 'main':
+..\src\CadenaDeCaracteres.c:22:8: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   22 |  largo=strlen(cadena);
+      |        ^~~~~~
+..\src\CadenaDeCaracteres.c:22:8: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\CadenaDeCaracteres.c:13:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   12 | #include <stdlib.h>
+  +++ |+#include <string.h>
+   13 | 
+gcc -o CadenaDeCaracteres.exe "src\\CadenaDeCaracteres.o" 
+
+21:38:14 Build Finished. 0 errors, 2 warnings. (took 452ms)
+

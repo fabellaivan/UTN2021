@@ -1,0 +1,14 @@
+11:53:09 **** Rebuild of configuration Debug for project 3-1Funciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\3-1Funciones.o" "..\\src\\3-1Funciones.c" 
+..\src\3-1Funciones.c:20:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   20 | MostrarFlotante(float numero)
+      | ^~~~~~~~~~~~~~~
+..\src\3-1Funciones.c:20:1: warning: conflicting types for 'MostrarFlotante'
+..\src\3-1Funciones.c:13:6: note: previous declaration of 'MostrarFlotante' was here
+   13 | void MostrarFlotante(float numero);
+      |      ^~~~~~~~~~~~~~~
+gcc -o 3-1Funciones.exe "src\\3-1Funciones.o" 
+
+11:53:10 Build Finished. 0 errors, 2 warnings. (took 881ms)
+

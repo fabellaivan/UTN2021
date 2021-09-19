@@ -1,0 +1,65 @@
+/*
+ * Bibliteca.c
+ *
+ *  Created on: 3 sept 2021
+ *      Author: Ivan Fabella
+ */
+
+#include "Biblioteca.h"
+
+int Suma(int numeroA, int numeroB)
+{
+	int resultado;
+	resultado=numeroA+numeroB;
+	return resultado;
+}
+
+int Resta(int numeroA, int numeroB)
+{
+	int resultado;
+	resultado=numeroA-numeroB;
+	return resultado;
+}
+
+int Multiplicacion(int numeroA, int numeroB)
+{
+	int resultado;
+	resultado=numeroA*numeroB;
+	return resultado;
+}
+
+float Division(int numeroA, int numeroB)
+{
+	float resultado;
+	if(numeroB==0)
+	{
+		return 0;
+	}
+	else
+	{
+		resultado=(float)numeroA/numeroB;
+		return resultado;
+	}
+}
+
+int factorial(int numero)
+{
+
+	int factorial;
+	factorial=1;
+
+	if(numero<0||numero>12||numero==0)
+	{
+		return 0;
+	}
+	else
+	{
+		for(int i=numero;i>1;i--)
+		{
+			factorial=factorial*i;
+		}
+		return factorial;
+	}
+}
+
+

@@ -1,0 +1,62 @@
+/*
+ ============================================================================
+ Name        : 4-2Ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+/*Realizar un programa que permita la carga de temperaturas en celsius y fahrenheit ,
+ * validando que las temperaturas ingresadas estén entre el punto de congelación y ebullición del agua para cada tipo de escala.
+Las validaciones se hacen en una biblioteca.
+Las funciones de transformación de fahrenheit a celsius y de celsius a fahrenheit se hacen en otra biblioteca.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float Validaciones(char mensaje[],int min, int max);
+
+int main(void) {
+	setbuf(stdout, NULL);
+	float celcius;
+	float fahrenheit;
+	char temperatura;
+
+	printf("Que tipo de temperatura va a cargar ? f para Fah o c para Cel ");
+	fflush(stdin);
+	scanf("%c",&temperatura);
+	temperatura=tolower(temperatura);
+
+	switch(temperatura)
+	{
+	case 'c':
+		celcius=Validaciones("Ingrese la Temperatura Celcius",0,100);
+
+	break;
+	case 'f':
+		fahrenheit=Validaciones("Ingrese la Temperatura fahrenheit",32,212);
+
+	break;
+	}
+
+
+
+	return EXIT_SUCCESS;
+}
+float Validaciones(char mensaje[],int min, int max)
+{
+	float numeroIngresado;
+	do{
+		printf("%s",mensaje);
+		scanf("%d",&numeroIngresado);
+		if(numeroIngresado<min || numeroIngresado>max)
+		{
+			printf("La temperatura ingresada no esta dentro de los valores correspondientes");
+			numeroIngresado=0;
+		}
+	}while(numeroIngresado==0);
+
+	return numeroIngresado;
+}

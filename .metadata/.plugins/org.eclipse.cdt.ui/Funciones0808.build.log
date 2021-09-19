@@ -1,0 +1,26 @@
+16:27:50 **** Rebuild of configuration Debug for project Funciones0808 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\IngresarValor.o" "..\\src\\IngresarValor.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Funciones0808.o" "..\\src\\Funciones0808.c" 
+..\src\Funciones0808.c: In function 'CargaVector':
+..\src\Funciones0808.c:61:9: error: too many arguments to function 'PedirEntero'
+   61 |   index=PedirEntero("Ingrese la posicion",1,tam);
+      |         ^~~~~~~~~~~
+In file included from ..\src\Funciones0808.c:13:
+..\src\Bibliotecas.h:11:5: note: declared here
+   11 | int PedirEntero(char mensaje[]);
+      |     ^~~~~~~~~~~
+..\src\Funciones0808.c:64:35: error: expected ';' before 'fflush'
+   64 |   printf("Desea seguir con otro?")
+      |                                   ^
+      |                                   ;
+   65 |   fflush(stdin);
+      |   ~~~~~~                           
+..\src\Funciones0808.c: In function 'InicializarVector':
+..\src\Funciones0808.c:73:5: error: 'listaNumeros' undeclared (first use in this function)
+   73 |     listaNumeros[tam]=valorInicial;
+      |     ^~~~~~~~~~~~
+..\src\Funciones0808.c:73:5: note: each undeclared identifier is reported only once for each function it appears in
+
+16:28:04 Build Failed. 3 errors, 0 warnings. (took 13s.569ms)
+
