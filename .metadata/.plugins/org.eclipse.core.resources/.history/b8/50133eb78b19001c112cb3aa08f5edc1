@@ -106,11 +106,11 @@ int main(void) {
 
 				if(resultadoDivision==0)
 				{
-					printf("No se pudo calcular la division.  No se puede dividir entre cero\n ");
+					printf("No se pudo calcular la division.  no se puede dividir entre cero\n ");
 				}
 				else
 				{
-					printf("El resultado de la division es %f\n",resultadoDivision);
+					printf("El resultado de la division es %2f\n",resultadoDivision);
 				}
 
 				if(resultadoFactorialA==0)
@@ -124,7 +124,7 @@ int main(void) {
 
 				if(resultadoFactorialB==0)
 				{
-					printf("El operando B esta fuera de rango para factorizar. Debe ser mayor a 0 y menor a 12\n\n");
+					printf("el operando B esta fuera de rango para factorizar. Debe ser mayor a 0 y menor a 12\n\n");
 				}
 					else
 					{
@@ -151,7 +151,7 @@ int main(void) {
 
 
 		default :
-			printf("Opcion no valida\n");
+					printf("Opcion no valida\n");
 		break;
 
 		}

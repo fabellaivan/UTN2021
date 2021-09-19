@@ -6,7 +6,6 @@
  */
 
 #include "Biblioteca.h"
-
 /// @fn int Suma(int, int)
 /// @brief Funcion que suma dos operandos
 ///
@@ -70,7 +69,7 @@ float Division(int numeroA, int numeroB)
 /// @brief Funcion para factoriar un operando
 ///
 /// @param numero Operando  a factorizar
-/// @return Retorna '0' si los valores son mayores a 12 o menores a 0 O el resultado del factorial
+/// @return Retorna '0' si los valores son mayores a 12 o menores a 0 o el resultado del factorial
 int factorial(int numeroF)
 {
 

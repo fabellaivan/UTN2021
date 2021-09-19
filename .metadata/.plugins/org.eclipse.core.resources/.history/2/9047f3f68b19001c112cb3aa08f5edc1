@@ -110,7 +110,7 @@ int main(void) {
 				}
 				else
 				{
-					printf("El resultado de la division es %f\n",resultadoDivision);
+					printf("El resultado de la division es %2f\n",resultadoDivision);
 				}
 
 				if(resultadoFactorialA==0)
